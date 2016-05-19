@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div>
-			<div>
+			
 				<div class="swiper">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
@@ -46,48 +46,87 @@
 						</a>
 					</div>
 				</div>
-				<div class="mid-nav">
-					<div class="mid-nav-item">
+				<div class="mid-nav grid">
+					<div class="mid-nav-item grid-item">
 						<a href="javascipt:void()0">
 							<img alt="" src="images/icon11.png" />
 							<div>视频专区</div>
 						</a>
 					</div>
-					<div class="mid-nav-item">
+					<div class="mid-nav-item grid-item">
 						<a href="javascipt:void()0">
 							<img alt="" src="images/icon01.png" />
 							<div>今日最新</div>
 						</a>
 					</div>
-					<div class="mid-nav-item">
+					<div class="mid-nav-item grid-item">
 						<a href="javascipt:void()0">
 							<img alt="" src="images/icon31.png" />
 							<div>最热活动</div>
 						</a>
 					</div>
-					<div class="mid-nav-item">
+					<div class="mid-nav-item grid-item">
 						<a href="javascipt:void()0">
 							<img alt="" src="images/icon21.png" />
 							<div>好友动态</div>
 						</a>
 					</div>
 				</div>
-				<div class="local-activitise">
-					<div class="head"><i class="icon-location-arrow"></i> 武汉･周围都在看</div>
-					<div class="body">
-						<div>
+				
+				<div class="br"></div>
+				
+				<div class="block-title grid">
+					<div class="grid-item"><i class="icon-location-arrow"></i> 武汉･周围都在看 </div>
+					<div class="grid-item"><a href="javascript:void(0)"><i class="icon-refresh"></i> 换一换</a></div>
+				</div>
+				<div class="local-activitise grid">
+					<div class="activity-item grid-item">
+						<a href="javascript:void(0)">
 							<img src="images/food2.jpg" />
 							<div>美味甜点一网打尽</div>
-						</div>
-						<div>
-							<img src="images/food2.jpg" />
-							<div>美味甜点一网打尽</div>
-						</div>
-						<div>
-							<img src="images/food2.jpg" />
-							<div>美味甜点一网打尽</div>
-						</div>
+						</a>
 					</div>
+					<div class="activity-item grid-item">
+						<a href="javascript:void(0)">
+							<img src="images/food2.jpg" />
+							<div>美味甜点一网打尽</div>
+						</a>
+					</div>
+					<div class="activity-item grid-item">
+						<a href="javascript:void(0)">
+							<img src="images/food2.jpg" />
+							<div>美味甜点一网打尽</div>
+						</a>
+					</div>
+					
+				</div>
+			
+			<div class="br"></div>
+			
+			<div class="bottom-bar grid">
+				<div class="grid-item">
+					<a href="javascripipt:void(0)">
+						<i class="icon-home"></i>
+						<div>首页</div>
+					</a>
+				</div>
+				<div class="grid-item">
+					<a href="javascripipt:void(0)">
+						<i class="icon-comment-alt"></i>
+						<div>圈圈</div>
+					</a>
+				</div>
+				<div class="grid-item">
+					<a href="javascripipt:void(0)">
+						<i class="icon-shopping-cart"></i>
+						<div>购物车</div>
+					</a>
+				</div>
+				<div class="grid-item">
+					<a href="javascripipt:void(0)">
+						<i class="icon-user"></i>
+						<div>我的</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -104,6 +143,9 @@
 				autoplay: 2500,
 				autoplayDisableOnInteraction: false
 			});
+			
+			$("body").css("padding-bottom",$(".bottom-bar").height()+"px");
+			
 		});
 	</script>
 </html>

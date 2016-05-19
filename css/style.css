@@ -51,6 +51,9 @@ html {
     }
 }
 
+.br {
+	margin-bottom: 1rem;
+}
 
 .swiper {
 	/*max-height: 15rem;*/
@@ -83,7 +86,7 @@ html {
 .top-bar a {
 	color: #CCC;
 	text-decoration: none;
-	font-size: initial;
+	font-size: 1rem;
 }
 .top-bar .top-bar-icon {
 	padding: 0.7rem;
@@ -127,21 +130,39 @@ html {
 	border: none;
 }
 
-.mid-nav {
+.grid {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	background: #FFFFFF;
 }
-.mid-nav .mid-nav-item {
+.grid .grid-item {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+}
+.block-title {
+	background: #FFFFFF;
+	padding: 0.7rem 1.2rem 0.2rem;
+	font-size: 1.5rem;
+}
+.block-title a {
+	text-decoration: none;
+	color: #E66B1A;
+}
+.block-title .grid-item {
+	justify-content: space-between;
+}
+.block-title .grid-item:last-child{
+	text-align: right;
+}
+
+.mid-nav .mid-nav-item {
 	padding: 0 1rem .8rem;
 	text-align: center;
-}
+} 
 .mid-nav .mid-nav-item a {
 	text-decoration: none;
 	color: #333333;
@@ -156,39 +177,45 @@ html {
 .local-activitise {
 	background: #FFFFFF;
 	padding: 0.8rem;
-	margin-top: 1rem;
 }
-.local-activitise .head {
-	/*line-height: 1.5rem;*/
-	/*height: 1.5rem;*/
-	font-size: 1.7rem;
-	padding: 0 0 1rem;
-}
-.local-activitise .body {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	font-size: 1.4rem;
-	
-}
-.local-activitise .body > div {
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
+.local-activitise .activity-item {
 	text-align: center;
-	padding-right: .7rem;
+	padding: 0 0.4rem;
 }
-.local-activitise .body > div:nth-child(3) {
-	padding-right: 0;
+.local-activitise .activity-item a {
+	text-decoration: none;
+	color: #333333;
+	display: block;
+	font-size: 1.4rem;
 }
-.local-activitise .body > div img {
+.local-activitise .activity-item a img {
 	width: 100%;
 	border-radius: 5px;
 }
-.local-activitise .body > div > div {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+.local-activitise .activity-item a div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;  
+    /* 用 white-space:nowrap; 不知什么原因没有效果 
+     * 多行文本溢出解决办法：http://www.css88.com/archives/5206
+     */
+    -webkit-box-orient: vertical;
+}
+.bottom-bar {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.bottom-bar .grid-item {
+	text-align: center;
+	padding: 0.5rem;
+	font-size: 1.4rem;
+}
+.bottom-bar .grid-item a {
+	display: block;
+	text-decoration: none;
+	color: #E66B1A;
 }
