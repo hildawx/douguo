@@ -149,6 +149,7 @@ html {
 	font-size: 1.5rem;
 }
 .block-title a {
+	/*display: block;*/
 	text-decoration: none;
 	color: #E66B1A;
 }
@@ -202,6 +203,25 @@ html {
      */
     -webkit-box-orient: vertical;
 }
+
+.tab .grid-item {
+	justify-content: center;
+}
+.tab .grid-item a {
+	padding: 0.8rem;
+	font-size: 1rem;
+	display: block;
+	text-decoration: none;
+	color: #333333;
+	text-align: center;
+}
+.tab .grid-item a.active {
+	color: #E66B1A;
+	border-bottom: 2px solid #E66B1A;
+	font-size: 1.4rem;
+}
+
+
 .bottom-bar {
 	position: fixed;
 	width: 100%;
