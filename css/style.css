@@ -221,6 +221,10 @@ html {
 	font-size: 1.4rem;
 }
 
+.tab-content-item {
+	background: #FFFFFF;
+	padding: 0.8rem;
+}
 
 .bottom-bar {
 	position: fixed;
