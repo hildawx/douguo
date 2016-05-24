@@ -46,6 +46,7 @@
 					</a>
 				</div>
 			</div>
+			
 			<div class="mid-nav grid">
 				<div class="mid-nav-item grid-item">
 					<a href="javascipt:void(0)">
@@ -176,7 +177,7 @@
 		
 		</div>
 	</body>
-	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
 	<script src="js/swiper/swiper.min.js"></script>
 	<script>
 		$(function(){
@@ -200,26 +201,21 @@
 				}
 				element.ontouchmove = function(e) {
 					endY = e.touches[0].clientY;
-//					console.log(endY);
-					if(startY-endY > 0) { // 向上滑动
-//						console.log(!$(".top-bar").hasClass("top-fixed"));
+					var re = startY*1 - endY*1;
+//					console.log(re);
+					if(re > 0) { // 向上滑动
 						if(!$(".top-bar").hasClass("top-fixed")) {
 							$(".top-bar").addClass("top-fixed");
 						}
-					} else if (startY-endY < 0) {  // 向下滑动
-						if(document.scrollTop){
-							console.log("document:");
-							console.log(document.scrollTop)
-							console.log("-----------");
-						}
-						if(window.scrollY < 20){
-//							console.log("window:");
-//							console.log(window.scrollY);
-//							console.log("-----------");
+					} else if (re < 5) {  // 向下滑动
+						var top = document.scrollTop ? document.scrollTop : window.scrollY;
+						if(top < 20){
 							if($(".top-bar").hasClass("top-fixed")) {
 								$(".top-bar").removeClass("top-fixed");
 							}
 						}
+						
+					} else {
 						
 					}
 				}

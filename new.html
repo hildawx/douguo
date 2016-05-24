@@ -4,7 +4,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="js/swiper/swiper.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<style>
@@ -13,6 +12,16 @@
 	</head>
 	<body>
 		<div>
+			
+			<div class="header grid">
+				<div class="header-back">
+					<a href="javascript:history.go(-1)"><i class="icon-angle-left"></i></a>
+				</div>
+				<div class="header-title grid-item">
+					<div><a href="javascript:void(0)">今日最新</a></div>
+				</div>
+				<div><a href="javascript:void(0)"></a></div>
+			</div>
 			
 			<div class="tab-content">
 				<div class="tab-content-item">
@@ -91,19 +100,11 @@
 		
 		</div>
 	</body>
-	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
 	<script src="js/swiper/swiper.min.js"></script>
 	<script>
 		$(function(){
-			var mySwiper = new Swiper('.swiper-container',{
-				loop: true,
-				pagination: ".swiper-pagination",
-				centeredSlides: true,
-				spaceBetween: 30,
-				autoplay: 2500,
-				autoplayDisableOnInteraction: false
-			});
-			
+			$("body").css("padding-top",$(".header").height()+"px");
 			$("body").css("padding-bottom",$(".bottom-bar").height()+"px");
 			
 		});
