@@ -143,6 +143,60 @@ html {
 	-ms-flex: 1;
 	flex: 1;
 }
+.media {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	height: 5rem;
+}
+.media-figure {
+	position: relative;
+	top: -2rem;
+	text-align: right;
+}
+.media-figure img{
+	width: 4rem;
+	height: 4rem;
+	border: 2px solid #FFFFFF;
+	border-radius: 50%;
+	margin-right: .5rem;
+}
+.media-reverse > .media-figure {
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	margin: 0 0 0 1rem;
+}
+.media-body {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+.media-body .title {
+	font-size: 1.6rem;
+	height: 3rem;
+	line-height: 3rem;
+}
+.media-body .subtitle, .media-figure .name {
+	color: #777777;
+	font-size: 1.3rem;
+}
+.media-figure .name {
+	margin-top: .5rem;
+}
+.media-body .subtitle .view {
+	margin-right: 0.5rem;
+}
+.media-body .subtitle .collect {
+	margin-left: 0.5rem;
+}
 .block-title {
 	background: #FFFFFF;
 	padding: 0.7rem 1.2rem 0.2rem;
@@ -209,7 +263,7 @@ html {
 }
 .tab .grid-item a {
 	padding: 0.8rem;
-	font-size: 1rem;
+	font-size: 1.3rem;
 	display: block;
 	text-decoration: none;
 	color: #333333;
@@ -232,6 +286,7 @@ html {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	z-index: 999;
 }
 .bottom-bar .grid-item {
 	text-align: center;
