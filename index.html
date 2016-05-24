@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-		<title></title>
+		<title>豆果美食</title>
 		<link rel="stylesheet" type="text/css" href="js/swiper/swiper.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -17,8 +17,8 @@
 			<div class="swiper">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-				        <div class="swiper-slide"><a href=""><img src="images/banner1.jpg" alt=""></a></div>
-				        <div class="swiper-slide"><a href=""><img src="images/banner2.jpg" alt=""></a></div>
+				        <div class="swiper-slide"><a href="javascript:void(0)"><img src="images/banner1.jpg" alt=""><p>这样做的葡萄酒又香又甜</p></a></div>
+				        <div class="swiper-slide"><a href="javascript:void(0)"><img src="images/banner2.jpg" alt=""><p>别样下午茶</p></a></div>
 				    </div>
 				</div>
 				<!-- 如果需要分页器 -->
@@ -35,7 +35,7 @@
 				<div class="search-input">
 					<div class="search-group">
 						<div class="search-group-icon"><i class="icon-search"></i></div>
-						<div class="search-group-item"><input type="text" /></div>
+						<div class="search-group-item"><input type="text" placeholder="搜索菜谱、用户、商品"/></div>
 					</div>
 				</div>
 				
@@ -190,6 +190,41 @@
 			});
 			
 			$("body").css("padding-bottom",$(".bottom-bar").height()+"px");
+			
+			var ScrollingDG = function() {
+				var startY, endY;
+
+				var element = document.getElementsByTagName("body")[0];
+				element.ontouchstart = function(e) {
+					startY = e.touches[0].clientY;
+				}
+				element.ontouchmove = function(e) {
+					endY = e.touches[0].clientY;
+//					console.log(endY);
+					if(startY-endY > 0) { // 向上滑动
+//						console.log(!$(".top-bar").hasClass("top-fixed"));
+						if(!$(".top-bar").hasClass("top-fixed")) {
+							$(".top-bar").addClass("top-fixed");
+						}
+					} else if (startY-endY < 0) {  // 向下滑动
+						if(document.scrollTop){
+							console.log("document:");
+							console.log(document.scrollTop)
+							console.log("-----------");
+						}
+						if(window.scrollY < 20){
+//							console.log("window:");
+//							console.log(window.scrollY);
+//							console.log("-----------");
+							if($(".top-bar").hasClass("top-fixed")) {
+								$(".top-bar").removeClass("top-fixed");
+							}
+						}
+						
+					}
+				}
+			
+			}();
 			
 		});
 	</script>
