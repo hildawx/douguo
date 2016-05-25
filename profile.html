@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			
+			<div class="header grid">
+				<div class="header-back">
+					<a href="javascript:void(0)"><i class="icon-cog"></i></a>
+				</div>
+				<div class="header-title grid-item">
+					<div><a href="javascript:void(0)">我的</a></div>
+				</div>
+				<div class="header-right"><a href="javascript:void(0)"><i class="icon-bell-alt"></i></a></div>
+			</div>
+			
+			<div>
+				
+			</div>
+			<div class="user-info grid">
+				<div class="user-info-img">
+					<a href="javascript:void(0)">
+						<img src="images/user.png" width="100%" />
+					</a>
+				</div>
+				<div class="user-info-detail">
+					<div class="user-detail grid">
+						<div class="grid-item user-detail-name">乡间小路上的小红帽</div>
+						<div class="grid-item user-detail-tel">15907564321</div>
+						<div class="grid-item user-detail-other">菜谱<span class="red">0</span> | 作品<span class="red">0</span> | 帖子<span class="red">0</span></div>
+					</div>
+				</div>
+				<div class="more">
+					<a href="javascript:void(0)"><i class="icon-angle-right"></i></a>
+				</div>
+			</div>
+			<div class="grid user-ctrl">
+				<div class="grid-item"><a href="javascript:void(0)"><i class="icon-coffee"></i> 上传菜谱</a></div>
+				<div class="grid-item"><a href="javascript:void(0)"><i class="icon-camera"></i> 上传作品</a></div>
+			</div>
+			<!--<div class="br"></div>-->
+			
+			<div class="grid list-item">
+				<div class="grid-item">
+					<div> 全部订单</div>
+				</div>
+				<div class="more">
+					<a href="javascript:void(0)"><i class="icon-angle-right"></i></a>
+				</div>
+			</div>
+			<div class="grid list-item list-item2 center">
+				<div class="grid-item">
+					<a href="javascript:void(0)">
+						<i class="icon-suitcase"></i>
+						待付款
+					</a>
+				</div>
+				<div class="grid-item">
+					<a href="javascript:void(0)">
+						<i class="icon-dropbox"></i>
+						待发货
+					</a>
+				</div>
+				<div class="grid-item">
+					<a href="javascript:void(0)">
+						<i class="icon-gift"></i>
+						待收货
+					</a>
+				</div>
+				<div class="grid-item">
+					<a href="javascript:void(0)">
+						<i class="icon-smile"></i>
+						待评价
+					</a>
+				</div>
+			</div>
+			<div class="grid list-item">
+				<div class="grid-item">
+					<div> 我的优惠券</div>
+				</div>
+				<div class="more">
+					<a href="javascript:void(0)"><i class="icon-angle-right"></i></a>
+				</div>
+			</div>
+			
+			<div class="br"></div>
+			
+			<div class="grid list-item">
+				<div class="grid-item">
+					<div> 我的收藏</div>
+				</div>
+				<div class="more">
+					<a href="javascript:void(0)"><i class="icon-angle-right"></i></a>
+				</div>
+			</div>
+			<div class="grid list-item">
+				<div class="grid-item">
+					<div> 最近浏览菜谱</div>
+				</div>
+				<div class="more">
+					<a href="javascript:void(0)"><i class="icon-angle-right"></i></a>
+				</div>
+			</div>
+			<div class="grid list-item">
+				<div class="grid-item">
+					<div> 采购清单</div>
+				</div>
+				<div class="more">
+					<a href="javascript:void(0)"><i class="icon-angle-right"></i></a>
+				</div>
+			</div>
+			<div class="grid list-item">
+				<div class="grid-item">
+					<div> 草稿箱</div>
+				</div>
+				<div class="more">
+					<a href="javascript:void(0)"><i class="icon-angle-right"></i></a>
+				</div>
+			</div>
+			<div class="br"></div>
+			
+			<div class="bottom-bar grid">
+				<div class="grid-item">
+					<a href="index.html">
+						<i class="icon-home"></i>
+						<div>首页</div>
+					</a>
+				</div>
+				<div class="grid-item">
+					<a href="javascripipt:void(0)">
+						<i class="icon-comment-alt"></i>
+						<div>圈圈</div>
+					</a>
+				</div>
+				<div class="grid-item">
+					<a href="javascripipt:void(0)">
+						<i class="icon-shopping-cart"></i>
+						<div>购物车</div>
+					</a>
+				</div>
+				<div class="grid-item">
+					<a class="active" href="javascripipt:void(0)">
+						<i class="icon-user"></i>
+						<div>我的</div>
+					</a>
+				</div>
+			</div>
+		
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script src="js/swiper/swiper.min.js"></script>
+	<script>
+		$(function(){
+			$("body").css("padding-top",$(".header").outerHeight()+"px");
+			$("body").css("padding-bottom",$(".bottom-bar").height()+"px");
+			
+			$(".user-detail").css("height",$(".user-info-img").height()+"px");
+			
+		});
+	</script>
+</html>
