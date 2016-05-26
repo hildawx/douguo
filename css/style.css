@@ -446,19 +446,25 @@ span.red {
 	flex-direction: column;
 	-webkit-align-content: space-between;
 	align-content: space-between;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	height: 6rem;
 }
 .user-detail .user-detail-name {
 	font-size: 1.6rem;
 	/*margin-bottom: .8rem;*/
-	margin-top: .6rem;
+	/*margin-top: .6rem;*/
+
 }
 .user-detail .user-detail-tel {
 	font-size: 1.4rem;
 	color: #777777!important;
 	/*margin-bottom: .6rem;*/
+
 }
 .user-detail .user-detail-other {
 	font-size: 1.4rem;
+
 }
 
 .list-item {
