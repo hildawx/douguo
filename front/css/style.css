@@ -1,7 +1,10 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	font-family: "微软雅黑";
+	font-family:"Helvetica Neue",Helvetica,STHeiTi,"微软雅黑",sans-serif;
+	-webkit-user-select: none;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -18,6 +21,7 @@ html {
 
 a,button,input,optgroup,select,textarea {
     -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+    outline: none;
 }
 a {
 	text-decoration: none;	
@@ -31,12 +35,12 @@ a {
 span.red {
 	margin: 0 .4rem;
 }
-@media screen and (min-width:480px) and (max-width:639px) {
+/*@media screen and (min-width:480px) and (max-width:639px) {
     html {
         font-size: 15px
     }
-}
-@media screen and (min-width:640px) and (max-width:719px) {
+}*/
+/*@media screen and (min-width:640px) and (max-width:719px) {
     html {
         font-size: 20px
     }
@@ -66,7 +70,7 @@ span.red {
     html {
         font-size: 32px
     }
-}
+}*/
 
 .header {
 	position: fixed;
@@ -83,6 +87,7 @@ span.red {
 .header .header-back, .header .header-right {
 	text-align: center;
 	width: 2rem;
+	line-height: 2rem;
 }
 .header .header-back {
 	margin-left: .8rem;
@@ -112,9 +117,9 @@ span.red {
 	color: #FFFFFF;
 	text-decoration: none;
 	position: absolute;
-	bottom: 0rem;
+	bottom: 2.6rem;
 	padding-left: 1rem;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 }
 .swiper-pagination {
 	position: relative;
@@ -128,6 +133,22 @@ span.red {
 	margin: 0 0.2rem;
 	background: #F1F1F1;
 }
+.slide-name {
+	position: absolute;
+	bottom: 0rem;
+	padding-left: 1rem;
+	font-size: 1.4rem;
+	line-height: 56px;
+	color: #F1F1F1;
+}
+.slide-name img {
+	width: 2.6rem!important;
+	border-radius: 50%;
+	position: relative;
+	top: 10px;
+	margin-right: 10px;
+}
+
 .top-bar {
 	position: fixed;
 	top: 0;
@@ -151,6 +172,7 @@ span.red {
 .top-bar .top-bar-icon {
 	padding: 0.7rem;
 	text-align: center;
+	/*padding-top: 14px;*/
 }
 .top-bar.top-fixed {
 	position: fixed;
@@ -230,18 +252,19 @@ span.red {
 	-ms-flex-align: start;
 	align-items: flex-start;
 	height: 5rem;
+	position: relative;
 }
 .media-figure {
-	position: relative;
-	top: -2rem;
-	text-align: right;
+	position: absolute;
+	top: -25px;
+	text-align: center;
+	right: 10px;
 }
 .media-figure img{
 	width: 4rem;
 	height: 4rem;
 	border: 2px solid #FFFFFF;
 	border-radius: 50%;
-	margin-right: .5rem;
 }
 .media-reverse > .media-figure {
 	-webkit-box-ordinal-group: 2;
@@ -252,14 +275,15 @@ span.red {
 }
 .media-body {
 	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
+		-webkit-flex: 1;
+			-ms-flex: 1;
+				flex: 1;
 }
 .media-body .title {
 	font-size: 1.6rem;
 	height: 3rem;
 	line-height: 3rem;
+	color: #333333;
 }
 .media-body .subtitle, .media-figure .name {
 	color: #777777;
@@ -357,6 +381,10 @@ span.red {
 	padding: 0.8rem;
 }
 
+.tab-content-item p {
+	font-size: 1.4rem;
+}
+
 .bottom-bar {
 	position: fixed;
 	width: 100%;
@@ -381,7 +409,28 @@ span.red {
 	text-decoration: none;
 	color: #E66B1A;
 }
-
+.bottom-bar.bottom-bar-2 .grid-item {
+	padding: 0;
+}
+.bottom-bar.bottom-bar-2 {
+	height: 5rem;
+}
+.bottom-bar.bottom-bar-2 a {
+	/*padding: 0.5rem;*/
+	/*line-height: 4rem;*/
+	padding-top: 0.6rem;
+	height: 100%;
+}
+.bottom-bar.bottom-bar-2 a.active {
+	background-color: #E66B1A;
+	color: #F1F1F1;
+	text-align: center;
+	line-height: 5rem;
+	padding-top: 0;
+}
+.bottom-bar.bottom-bar-2 a.active div {
+	display: inline-block;
+}
 
 .user-ctrl {
 	background: transparent;
@@ -423,8 +472,8 @@ span.red {
 	
 }
 .user-info .user-info-img {
-	width: 22%;
-	padding-right: .8rem;
+	width: 80px;
+	padding-right: 20px;
 }
 .user-info .user-info-img img {
 	border-radius: 50%;
@@ -436,6 +485,8 @@ span.red {
 .more a {
 	color: #999999;
 	font-size: 2rem;
+	width: 14px;
+	text-align: right;
 }
 .user-info .user-info-detail {
 	flex: 1;
@@ -448,23 +499,21 @@ span.red {
 	align-content: space-between;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
-	height: 6rem;
+	/*height: 6rem;*/
 }
 .user-detail .user-detail-name {
 	font-size: 1.6rem;
-	/*margin-bottom: .8rem;*/
-	/*margin-top: .6rem;*/
+	line-height: 1.5;
 
 }
 .user-detail .user-detail-tel {
 	font-size: 1.4rem;
 	color: #777777!important;
-	/*margin-bottom: .6rem;*/
-
+	line-height: 2;
 }
 .user-detail .user-detail-other {
 	font-size: 1.4rem;
-
+	line-height: 2;
 }
 
 .list-item {
@@ -473,7 +522,9 @@ span.red {
 	color: #555;
 	border-bottom: 1px solid #F1F1F1;
 }
-
+.list-item .grid-item {
+	line-height: 1.6;
+}
 .list-item a {
 	color: #555;
 }
@@ -483,4 +534,49 @@ span.red {
 .list-item2 a i {
 	font-size: 2rem;
 	display: block;
+}
+
+.multi-nav {
+	height: 2rem;
+	line-height: 2.6rem;
+}
+.multi-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.multi-nav ul li {
+	display: inline-block;
+	margin:0 8px;
+}
+.multi-nav ul li a {
+	text-decoration: none;
+	color: #333333;
+	font-size: 1.6rem;
+}
+.multi-nav ul li.active {
+	border-bottom: 2px solid #E66B1A;
+}
+.multi-nav ul li.active a {
+	color: #E66B1A;
+}
+
+.ctrl-item {
+	padding: .8rem;
+	font-size: 1.6rem;
+	color: #E66B1A;
+	line-height: 2rem;
+}
+.ctrl-item a {
+	color: #E66B1A;
+}
+.ctrl-item .sub a {
+	font-size: 1.3rem;
+	color: #777777;
+}
+.ctrl-item .pre-img {
+	margin-right: 6px;
+}
+.ctrl-item .pre-img a {
+	
 }

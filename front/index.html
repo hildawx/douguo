@@ -17,8 +17,18 @@
 			<div class="swiper">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-				        <div class="swiper-slide"><a href="javascript:void(0)"><img src="images/banner1.jpg" alt=""><p>这样做的葡萄酒又香又甜</p></a></div>
-				        <div class="swiper-slide"><a href="javascript:void(0)"><img src="images/banner2.jpg" alt=""><p>别样下午茶</p></a></div>
+				        <div class="swiper-slide">
+				        	<a href="detail.html">
+				        		<img src="images/banner1.jpg" alt=""><p>这样做的葡萄酒又香又甜!</p>
+				        		<div class="slide-name"><img src="images/touxiang.jpg"> by jQuery37</div>
+				        	</a>
+				        </div>
+				        <div class="swiper-slide">
+				        	<a href="javascript:void(0)">
+				        		<img src="images/banner2.jpg" alt=""><p>别样下午茶~</p>
+				        		<div class="slide-name"><img src="images/touxiang.jpg"> by Eziias</div>
+				        	</a>
+				        </div>
 				    </div>
 				</div>
 				<!-- 如果需要分页器 -->
@@ -118,32 +128,36 @@
 			</div>
 			<div class="tab-content">
 				<div class="tab-content-item">
-					<img width="100%" src="images/food52.jpg">
-					<div class="media media">
-						<div class="media-body">
-							<div class="title">酱香排骨</div>
-							<div class="subtitle"><span class="view">2152人浏览</span>&middot;<span class="collect">101人收藏</span></div>
+					<a href="detail.html">
+						<img width="100%" src="images/food52.jpg">
+						<div class="media media">
+							<div class="media-body">
+								<div class="title">酱香排骨</div>
+								<div class="subtitle"><span class="view">2152人浏览</span>&middot;<span class="collect">101人收藏</span></div>
+							</div>
+							<div class="media-figure">
+								<img src="images/icon12.png" />
+								<div class="name">小圆的厨房</div>
+							</div>
 						</div>
-						<div class="media-figure">
-							<img src="images/icon12.png" />
-							<div class="name">小圆的厨房</div>
-						</div>
-					</div>
+					</a>
 				</div>
 				<div class="br"></div>
 				
 				<div class="tab-content-item">
-					<img width="100%" src="images/food32.jpg">
-					<div class="media media">
-						<div class="media-body">
-							<div class="title">芬香草莓果酱，带来春日的甜蜜</div>
-							<div class="subtitle"><span class="view">2971人浏览</span>&middot;<span class="collect">241人收藏</span></div>
+					<a href="detail.html">
+						<img width="100%" src="images/food32.jpg">
+						<div class="media media">
+							<div class="media-body">
+								<div class="title">芬香草莓果酱，带来春日的甜蜜</div>
+								<div class="subtitle"><span class="view">2971人浏览</span>&middot;<span class="collect">241人收藏</span></div>
+							</div>
+							<div class="media-figure">
+								<img src="images/icon12.png" />
+								<div class="name">丝滑巧克力</div>
+							</div>
 						</div>
-						<div class="media-figure">
-							<img src="images/icon12.png" />
-							<div class="name">丝滑巧克力</div>
-						</div>
-					</div>
+					</a>
 				</div>
 				<div class="br"></div>
 			</div>
@@ -168,7 +182,7 @@
 					</a>
 				</div>
 				<div class="grid-item">
-					<a href="javascripipt:void(0)">
+					<a href="profile.html">
 						<i class="icon-user"></i>
 						<div>我的</div>
 					</a>
@@ -177,9 +191,58 @@
 		
 		</div>
 	</body>
-	<script type="text/javascript" src="js/zepto.min.js" ></script>
-	<script src="js/swiper/swiper.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/swiper/swiper.min.js"></script>
+	
 	<script>
+		function load (){
+	 		var startY, endY;
+	 		var element = document.getElementsByTagName("body")[0];
+	 		
+		    element.addEventListener('touchstart',touch, false);
+		    element.addEventListener('touchmove',touch, false);
+		    element.addEventListener('touchend',touch, false);
+		     
+		    function touch (event){
+		        var event = event || window.event;
+		    
+		        switch(event.type){
+		            case "touchstart":
+		            	startY = event.touches[0].clientY;
+		                console.log("Touch started (" + event.touches[0].clientX + "," + event.touches[0].clientY + ")");
+		                break;
+		            case "touchend":
+			            endY = event.changedTouches[0].clientY;
+						var re = startY*1 - endY*1;
+						//console.log(re);
+						if(re > 0) { // 向上滑动
+							if(!$(".top-bar").hasClass("top-fixed")) {
+								$(".top-bar").addClass("top-fixed");
+							}
+						} else if (re < 15) {  // 向下滑动
+							var top = document.scrollTop ? document.scrollTop : window.scrollY;
+							console.log("---------"+top+"-----------");
+							if(top < 200){
+								if($(".top-bar").hasClass("top-fixed")) {
+									$(".top-bar").removeClass("top-fixed");
+								}
+							}
+							
+						} else {
+							
+						}
+		                console.log("<br>Touch end (" + event.changedTouches[0].clientX + "," + event.changedTouches[0].clientY + ")");
+		                break;
+		            case "touchmove":
+		                //event.preventDefault();
+		                console.log("<br>Touch moved (" + event.touches[0].clientX + "," + event.touches[0].clientY + ")");
+		                break;
+		        }
+		         
+		    }
+		}
+		window.addEventListener('load',load, false);
+		
 		$(function(){
 			var mySwiper = new Swiper('.swiper-container',{
 				loop: true,
@@ -192,35 +255,6 @@
 			
 			$("body").css("padding-bottom",$(".bottom-bar").height()+"px");
 			
-			var ScrollingDG = function() {
-				var startY, endY;
-
-				var element = document.getElementsByTagName("body")[0];
-				element.ontouchstart = function(e) {
-					startY = e.touches[0].clientY;
-				}
-				element.ontouchmove = function(e) {
-					endY = e.touches[0].clientY;
-					var re = startY*1 - endY*1;
-//					console.log(re);
-					if(re > 0) { // 向上滑动
-						if(!$(".top-bar").hasClass("top-fixed")) {
-							$(".top-bar").addClass("top-fixed");
-						}
-					} else if (re < 5) {  // 向下滑动
-						var top = document.scrollTop ? document.scrollTop : window.scrollY;
-						if(top < 20){
-							if($(".top-bar").hasClass("top-fixed")) {
-								$(".top-bar").removeClass("top-fixed");
-							}
-						}
-						
-					} else {
-						
-					}
-				}
-			
-			}();
 			
 		});
 	</script>
