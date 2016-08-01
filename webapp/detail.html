@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script src="js/swiper/swiper.min.js"></script>
+	</head>
+	<body onload="">
+			
+			<div class="header grid">
+				<div class="header-back">
+					<a href="javascript:history.go(-1)"><i class="icon-angle-left"></i></a>
+				</div>
+				<div class="header-title grid-item">
+					<div class="multi-nav">
+						<ul>
+							<li class="active"><a href="javascript:void(0)">详情</a></li>
+							<li><a href="javascript:void(0)">学做</a></li>
+							<li><a href="javascript:void(0)">评论</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-right">
+					<a href="javascript:void(0)"><i class="icon-share"></i></a>
+				</div>
+			</div>
+			
+			<div id="wrapper" class="tab-content">
+				
+				<div class="tab-content-item">
+					<div class="content-detail">
+						<img width="100%" src="images/food52.jpg">
+						<p>
+							1. 准备材料：排骨一根，油，小葱，大蒜，酱油，醋，盐，糖，水
+						</p>
+						<img width="100%" src="images/food52.jpg">
+						<p>
+							2. 排骨剁成小段，油入锅，煎熟即可
+						</p>
+						<img width="100%" src="images/food52.jpg">
+						<p>
+							3. 放入调料
+						</p>
+					</div>
+					<div class="content-detail-ctrl">
+						
+						<div class="grid ctrl-item">
+							<div class="pre-img">
+								<a href="javascript:void(0)"><i class="icon-share"></i></a>
+							</div>
+							<div class="grid-item">
+								<div> 分享给好友</div>
+							</div>
+							<div class="sub">
+								<a href="javascript:void(0)">侵权举报</a>
+							</div>
+						</div>
+						<div class="grid ctrl-item">
+							<div class="pre-img">
+								<a href="javascript:void(0)"><i class="icon-camera-retro"></i></a>
+							</div>
+							<div class="grid-item">
+								<div> 47人成功学做了这道菜</div>
+							</div>
+						</div>
+						<div class="grid ctrl-item">
+							<div class="pre-img">
+								<a href="javascript:void(0)"><i class="icon-comment-alt"></i></a>
+							</div>
+							<div class="grid-item">
+								<div> 26条评论</div>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="br"></div>
+				
+			</disv>
+			
+			<div class="bottom-bar bottom-bar-2 grid">
+				<div class="grid-item">
+					<a href="javascript:void(0)">
+						<i class="icon-comment-alt"></i>
+						<div>评论</div>
+					</a>
+				</div>
+				<div class="grid-item">
+					<a href="javascript:void(0)">
+						<i class="icon-camera-retro"></i>
+						<div>上传</div>
+					</a>
+				</div>
+				<div class="grid-item">
+					<a class="active" href="javascript:void(0)">
+						<i class="icon-heart-empty"></i>
+						<div>收藏</div>
+					</a>
+				</div>
+			</div>
+		
+	</body>
+	
+	
+	<script>
+		$(function(){
+			$("body").css("padding-top",$(".header").outerHeight()+"px");
+			$("body").css("padding-bottom",$(".bottom-bar").height()+"px");
+//			
+		});
+	</script>
+</html>
